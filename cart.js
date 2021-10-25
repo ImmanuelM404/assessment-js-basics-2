@@ -93,6 +93,13 @@ console.log(cartTotalPrice1)
 
 /*
     TEXT ANSWER HERE
+    Customer Object Cart:
+    Properties: 
+    name - identifies customer  (string)
+    address - delivery or card processing (string)
+    items - items in cart for purchase [arr]
+    total - price (number)
+
 
 */
 
@@ -102,3 +109,9 @@ console.log(cartTotalPrice1)
 */
 
 //CODE HERE
+let customerObject = {
+    name: 'Name',
+    address: '123 Street',
+    items: ['Pizza', 'Pasta', 'Wings'],
+    total: 14.99
+}
