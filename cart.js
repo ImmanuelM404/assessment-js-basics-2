@@ -14,7 +14,7 @@
     inside. 
 
     Write a callback below that uses the reduce
-    array method to calculate the sum of all
+    array method to calculate the sum of all                          // callback  // .reduce method suming up array 'cartArray' that contains an object 'foodObject' inside (sum) 
     the food. 
 */
 
@@ -35,7 +35,14 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+ //const summedPrice = cart.reduce((a,c) => a + c )
+ let summedPrice = cart.reduce((acc, food) => {
+     return  acc + food.price
+
+ }, 0)
+     
+    // .reduce has two parameters (accumlator, currentValue) && index and array as the 3rd and 4th parameter (acc, cur, i, arr)
+ console.log(summedPrice)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -54,6 +61,13 @@ const cart = [
 */
 
 //CODE HERE
+
+let calcFinalPrice = (cartTotal, couponValue, tax) => {
+        cartTotalPrice = (cartTotal * tax) + cartTotal - couponValue
+        return cartTotalPrice
+}
+let cartTotalPrice1 = calcFinalPrice(12, 3, .06)
+console.log(cartTotalPrice1)
 
 
 

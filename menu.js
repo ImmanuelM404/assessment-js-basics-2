@@ -31,6 +31,15 @@
 */
 
 //CODE HERE
+let pizza = {
+    name: 'Pepporoni',
+    price: 4.99,
+    cateogory: 'Entree',
+    popularity: 12,
+    rating: 4.9,
+    tags: ['gluten free', 'kids']
+
+}
 
 
 
@@ -43,6 +52,7 @@
 */
 
 //CODE HERE
+console.log(pizza.popularity)
 
 
 /*
@@ -53,6 +63,8 @@
 */
 
 //CODE HERE
+let tagsList = pizza['tags'][1]
+console.log(tagsList)
 
 
 /*
@@ -63,6 +75,8 @@
 */
 
 //CODE HERE
+let {price} = pizza
+console.log(price)
 
 
 /*
@@ -73,6 +87,8 @@
 */
 
 //CODE HERE
+let {cateogory} = pizza
+console.log(cateogory)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -88,6 +104,18 @@
 */
 
 //CODE HERE
+const foodArr = {
+    
+    name: 'Pasta',
+    price: 8.99,
+    cateogory: 'Dish',
+    popularity: 20,
+    rating: 4.4,
+    tags: ['home dish', 'Takeout']
+
+    
+
+}
 
 
 
@@ -105,8 +133,11 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
+//const filteredFood = foodArr.filter(newTag => newTag.tags === 'home dish')
+ const filteredFood = foodArr.tags.filter( function (elem){
+        return elem === 'home dish'
+ })
+ console.log(filteredFood)                                 
 
 
 //////////////////PROBLEM 5////////////////////
@@ -149,7 +180,37 @@
 */
 
 //CODE HERE
+const  filterByProperty = (property, number, type) => { //foodArr.filter()
+    let filteredByProperty1 = foodArr.rating.filter(filterPro => {
+        if(filterPro.type === 'above'){
+            return property > number
+        }else if (filterPro.type === 'below'){
+            return property < number
+        } console.log(filteredByProperty1)
+    } ) 
+};
+console.log(filteredArray)
 
+
+//         if(property.rating > number){
+//             return type
+//         }else if (property.rating < number){
+//             return type
+//         } console.log(filteredByProperty1)
+//     } ) 
+// };
+
+
+
+
+        //         if(filterPro.type === 'above'){
+//             return property > number
+//         }else if (type === 'below'){
+//             return property < number
+//         } console.log(filteredByProperty1)
+//     } ) 
+// };
+//console.log(filteredArray)
 
 /*
     Invoke the `filterByProperty` function passing
@@ -159,3 +220,5 @@
 */
 
 //CODE HERE
+filterByProperty(foodArr.rating, 4.5, 'above')
+console.log(filteredArray)

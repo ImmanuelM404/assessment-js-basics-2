@@ -22,7 +22,11 @@
 */
 
 //CODE HERE
-
+let greetUser = (username) => {
+    // username = []  // output is blank 
+    return `Welcome back, ${username}`
+}
+console.log(greetUser('Andrew'))
 
 
 
@@ -48,8 +52,33 @@
 */
 
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
+// let canWeDeliver = (zipCode) => {
+//     for(let i = 0; i <= deliveryAreaZipCodes.length; i++){
+//     if (zipCode === deliveryAreaZipCodes[i]) {
+//         return 'You are eligible for delivery'
+//     } else {
+//         return 'Working on exapnding our deliveries, let us notify you once delivery is available'  // them email prompt 
+//     }
+// }
+// }
+// let deliveryOption = canWeDeliver(85206)
+// console.log(deliveryOption)
 
+// let canWeDeliver = (zipCode) => {        //// Come back to , i isn't iterating to check next index 
+//     for(let i = i; i <= deliveryAreaZipCodes.length; i++){
+//         for(let x = i + 1; x <= deliveryAreaZipCodes.length; x++){
+//             if (zipCode[i] === deliveryAreaZipCodes[i]) {
+//                 return 'You are eligible for delivery'
+//             } else {
+//                 return 'Working on exapnding our deliveries, let us notify you once delivery is available'  // them email prompt 
+//             } 
+//         } 
+//     } 
+// } 
+// let dropOff = canWeDeliver(85203)    // 85205, 85204, 85203, 85213, 85206
+// console.log(dropOff)
 //CODE HERE
+
 
 
 
@@ -71,6 +100,19 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
+function canWeDeliverTwo(zipCode) {                          // [85205, 85204, 85203, 85213, 85206]
+    zipCode = Number(zipCode)
+    if (zipCode.includes(85205)){ //|| deliveryAreaZipCodes.includes(85204) || deliveryAreaZipCodes.includes(85203)|| deliveryAreaZipCodes.includes(85213) || deliveryAreaZipCodes.includes(85206) ){
+        return 'You are eligible for delivery'
+    } else {
+        return'Working on exapnding our deliveries, let us notify you once delivery is available'
+    }
+
+} 
+
+let dropOff = canWeDeliverTwo(85205)    // 85205, 85204, 85203, 85213, 85206
+console.log(dropOff)
+
 
 
 //////////////////PROBLEM 3////////////////////
@@ -107,6 +149,12 @@ const deals = [
 */
 
 //CODE HERE
+let dealsTitle = '15% Off!'
+let newSale = console.log(dealsTitle.replace('15%', '10%'))
+//console.log(newSale)
+
+
+
 
 
 
@@ -124,3 +172,5 @@ const deals = [
 */
 
 //CODE HERE
+let dealDesc = 'This deal lasts until the end of March!'
+let extendedDeal = console.log(dealDesc.replace('March', 'April'))
